@@ -25,7 +25,7 @@ import com.aliyun.oss.model.PutObjectResult;
 @Component
 public class OSSClientUtil {
 
-	private static Logger logger = Logger.getLogger(OSSClientUtil.class);
+	//private static Logger logger = Logger.getLogger(OSSClientUtil.class);
 
 	private OSSClient ossClient;
 
@@ -109,7 +109,7 @@ public class OSSClientUtil {
 			PutObjectResult putResult = ossClient.putObject(bucketName, filedir + fileName, instream, objectMetadata);
 			ret = putResult.getETag();
 		} catch (IOException e) {
-			logger.error(e.getMessage(), e);
+			//logger.error(e.getMessage(), e);
 		} finally {
 			try {
 				if (instream != null) {

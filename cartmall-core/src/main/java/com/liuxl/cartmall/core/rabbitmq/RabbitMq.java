@@ -11,8 +11,12 @@ public class RabbitMq {
     private String username;
 	@Value("${spring.rabbitmq.password}")
     private String password;
-	@Value("${spring.rabbitmq.publisherconfirms}")
+	@Value("${spring.rabbitmq.publisher-confirms}")
     private Boolean publisherconfirms;
+	@Value("${spring.rabbitmq.port}")
+	private int port;
+	@Value("${spring.rabbitmq.virtual-host}")
+	private String vHost;
     
     
     
@@ -39,6 +43,18 @@ public class RabbitMq {
 	}
 	public void setPublisherconfirms(Boolean publisherconfirms) {
 		this.publisherconfirms = publisherconfirms;
+	}
+	public int getPort() {
+		return port;
+	}
+	public void setPort(int port) {
+		this.port = port;
+	}
+	public String getvHost() {
+		return vHost;
+	}
+	public void setvHost(String vHost) {
+		this.vHost = vHost;
 	}  
     
     
